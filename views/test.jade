@@ -1,0 +1,10 @@
+extends layout
+block extra_js
+	script
+		$(document).ready( function() {
+			$('#d1').datepicker();
+		} );
+block content
+	h1= title
+	p Please select a date
+	input#d1(type='text')
