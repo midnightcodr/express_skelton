@@ -13,7 +13,7 @@ A simple node.js+express+jade skelton to build web applications quickly. The fol
 	mv express_skelton your_new_project_name	
 Last two commands are needed because most likely you would start a new project based on this skelton.
 
-## Usage Example
+### Usage Example
 	// routes/index.js
 	exports.test = function(req, res){
 	  res.render('test', { title: 'Playground', jquery:true, jqueryui:true, blueprint:false })
