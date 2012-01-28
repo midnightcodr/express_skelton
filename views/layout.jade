@@ -3,10 +3,10 @@ html
 	head
 		title= title
 		if(typeof blueprint!='undefined' && blueprint)
-			link(rel='stylesheet', href='https://github.com/joshuaclayton/blueprint-css/raw/master/blueprint/screen.css', media='screen, projection')
-			link(rel='stylesheet', href='https://github.com/joshuaclayton/blueprint-css/raw/master/blueprint/print.css', media='print')
+			link(rel='stylesheet', href='/stylesheets/blueprint/screen.css', media='screen, projection')
+			link(rel='stylesheet', href='/stylesheets/blueprint/print.css', media='print')
 			// if lt IE 8
-				link(rel='stylesheet', href='https://github.com/joshuaclayton/blueprint-css/raw/master/blueprint/ie.css', media='screen, projection')
+				link(rel='stylesheet', href='/stylesheets/blueprint/ie.css', media='screen, projection')
 		if (typeof jqueryui!='undefined' && jqueryui)
 			link(rel='stylesheet', href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css', media='all')
 		if(typeof blueprint=='undefined' || !blueprint)
