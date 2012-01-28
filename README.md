@@ -1,12 +1,13 @@
-## About
+### About
 A simple node.js+express+jade skelton to build web applications quickly. The following items can be turned on of off by modifying the keys in routes/index.js (example provided)
+
 * blueprint
 * jquery (1.7.1, using google cdn)
 * jquery-ui (1.8.17, using google cdn)
 
 
 
-## Instruction
+### Instruction
 	git clone --depth 1 git://github.com/midnightcodr/express_skelton.git
 	rm -rf express_skelton/.git
 	mv express_skelton your_new_project_name	
