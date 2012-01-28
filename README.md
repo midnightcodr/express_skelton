@@ -11,7 +11,7 @@ A simple node.js+express+jade skelton to build web applications quickly. The fol
 	git clone --depth 1 git://github.com/midnightcodr/express_skelton.git
 	rm -rf express_skelton/.git
 	mv express_skelton your_new_project_name	
-Last two commands are needed because mostly likely you would start a new project based on this skelton.
+Last two commands are needed because most likely you would start a new project based on this skelton.
 
 ## Usage Example
 	// routes/index.js
