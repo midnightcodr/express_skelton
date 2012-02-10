@@ -4,6 +4,10 @@ block extra_js
 		$(document).ready( function() {
 			$('#d1').datepicker();
 		} );
+
+		window.addEvent('domready', function(){
+			alert('mootools is reay');
+		});
 block content
 	div.container
 		h1= title
