@@ -17,5 +17,11 @@ Last two commands are needed because most likely you would start a new project b
 ### Usage Example
 	// routes/index.js
 	exports.test = function(req, res){
-	  res.render('test', { title: 'Playground', jquery:true, jqueryui:true, blueprint:false })
+	  res.render('test', { 
+		title: 'Playground',
+		jquery: true,
+		jqueryui: true,
+		mootools: true,
+		blueprint: false
+	 });
 	};
