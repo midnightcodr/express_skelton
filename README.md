@@ -4,6 +4,7 @@ A simple node.js+express+jade skelton to build web applications quickly. The fol
 * blueprint
 * jquery (1.7.1, using google cdn)
 * jquery-ui (1.8.17, using google cdn)
+* mootools(1.4.3, using google cdn)
 
 
 
