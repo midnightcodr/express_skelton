@@ -5,6 +5,7 @@ A simple node.js+express+jade skelton to build web applications quickly. The fol
 * jquery (1.7.1, using google cdn)
 * jquery-ui (1.8.17, using google cdn)
 * mootools(1.4.3, using google cdn)
+* underscore(1.3.1, using local since it's not hosted on google cdn yet)
 
 
 
@@ -19,6 +20,7 @@ Last two commands are needed because most likely you would start a new project b
 	exports.test = function(req, res){
 	  res.render('test', { 
 		title: 'Playground',
+		underscore: true,
 		jquery: true,
 		jqueryui: true,
 		mootools: true,

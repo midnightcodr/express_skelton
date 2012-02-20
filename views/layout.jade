@@ -13,6 +13,8 @@ html
 			if(typeof blueprint=='undefined' || !blueprint)
 				link(rel='stylesheet', href='/stylesheets/style.css')
 		block js
+			if (typeof underscore!='undefined' && underscore)
+				script(src='/js/underscore-min.js')
 			if (typeof jquery!='undefined' && jquery)
 				script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
 			if (typeof jqueryui!='undefined' && jqueryui)

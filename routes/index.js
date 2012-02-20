@@ -9,6 +9,7 @@ exports.index = function(req, res){
 exports.test = function(req, res){
   res.render('test', { 
 	title: 'Playground',
+	underscore: true,
 	jquery: true,
 	jqueryui: true,
 	mootools: true,
