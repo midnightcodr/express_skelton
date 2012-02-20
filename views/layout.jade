@@ -2,24 +2,24 @@
 html
 	head
 		title= title
-		if(typeof blueprint!='undefined' && blueprint)
-			link(rel='stylesheet', href='/stylesheets/blueprint/screen.css', media='screen, projection')
-			link(rel='stylesheet', href='/stylesheets/blueprint/print.css', media='print')
-			// if lt IE 8
-				link(rel='stylesheet', href='/stylesheets/blueprint/ie.css', media='screen, projection')
-		if (typeof jqueryui!='undefined' && jqueryui)
-			link(rel='stylesheet', href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css', media='all')
-		if(typeof blueprint=='undefined' || !blueprint)
-			link(rel='stylesheet', href='/stylesheets/style.css')
-		block extra_css
-		if (typeof jquery!='undefined' && jquery)
-			script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
-		if (typeof jqueryui!='undefined' && jqueryui)
-			script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js')
-		if (typeof mootools!='undefined' && mootools)
-			script(src='https://ajax.googleapis.com/ajax/libs/mootools/1.4.3/mootools-yui-compressed.js')
-		if (typeof socket!='undefined' && socket)
-			script(src='/socket.io/socket.io.js')
-		block extra_js
+		block css
+			if(typeof blueprint!='undefined' && blueprint)
+				link(rel='stylesheet', href='/stylesheets/blueprint/screen.css', media='screen, projection')
+				link(rel='stylesheet', href='/stylesheets/blueprint/print.css', media='print')
+				// if lt IE 8
+					link(rel='stylesheet', href='/stylesheets/blueprint/ie.css', media='screen, projection')
+			if (typeof jqueryui!='undefined' && jqueryui)
+				link(rel='stylesheet', href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css', media='all')
+			if(typeof blueprint=='undefined' || !blueprint)
+				link(rel='stylesheet', href='/stylesheets/style.css')
+		block js
+			if (typeof jquery!='undefined' && jquery)
+				script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+			if (typeof jqueryui!='undefined' && jqueryui)
+				script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js')
+			if (typeof mootools!='undefined' && mootools)
+				script(src='https://ajax.googleapis.com/ajax/libs/mootools/1.4.3/mootools-yui-compressed.js')
+			if (typeof socket!='undefined' && socket)
+				script(src='/socket.io/socket.io.js')
 	body
 		block content

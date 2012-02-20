@@ -1,5 +1,5 @@
 extends layout
-block extra_js
+block append js
 	script
 		$(document).ready( function() {
 			$('#d1').datepicker();
@@ -8,8 +8,11 @@ block extra_js
 		window.addEvent('domready', function(){
 			alert('mootools is reay');
 		});
+block append css
+	style(type="text/css")
+		p.prompt {color:#646464;}
 block content
 	div.container
 		h1= title
-		p Please select a date
+		p.prompt Please select a date
 		input#d1(type='text')
