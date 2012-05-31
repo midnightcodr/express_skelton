@@ -8,11 +8,26 @@ exports.index = function(req, res){
 };
 exports.test = function(req, res){
   res.render('test', { 
-	title: 'Playground',
+	title: 'Let the fun start ...',
 	underscore: true,
 	jquery: true,
-	jqueryui: true,
-	mootools: true,
+	jqueryui: false,
+	mootools: false,
+	backbone: false,
+	bootstrap: false,
+	blueprint: true
+ });
+};
+
+exports.bootstrap = function(req, res){
+  res.render('test', { 
+	title: 'Bootstrap in action',
+	underscore: true,
+	jquery: true,
+	jqueryui: false,
+	mootools: false,
+	backbone: false,
+	bootstrap: true,
 	blueprint: false
  });
 };

@@ -1,11 +1,12 @@
 ### About
 A simple node.js+express+jade skelton to build web applications quickly. The following items can be turned on of off by modifying the keys in routes/index.js (example provided)
 
-* blueprint
-* jquery (1.7.1, using google cdn)
+* blueprint (using local file, tried cdn on github but it doesn't work as intended)
+* jquery (1.7.2, using google cdn)
 * jquery-ui (1.8.17, using google cdn)
 * mootools(1.4.3, using google cdn)
-* underscore(1.3.1, using local since it's not hosted on google cdn yet)
+* underscore(newest, using documentcloud.github.com cdn)
+* backbone( newest, using documentcloud.github.com cdn)
 
 
 
@@ -19,11 +20,26 @@ Last two commands are needed because most likely you would start a new project b
 	// routes/index.js
 	exports.test = function(req, res){
 	  res.render('test', { 
-		title: 'Playground',
+		title: 'Let the fun start ...',
 		underscore: true,
 		jquery: true,
-		jqueryui: true,
-		mootools: true,
+		jqueryui: false,
+		mootools: false,
+		backbone: false,
+		bootstrap: false,
+		blueprint: true
+	 });
+	};
+
+	exports.bootstrap = function(req, res){
+	  res.render('test', { 
+		title: 'Bootstrap in action',
+		underscore: true,
+		jquery: true,
+		jqueryui: false,
+		mootools: false,
+		backbone: false,
+		bootstrap: true,
 		blueprint: false
 	 });
 	};

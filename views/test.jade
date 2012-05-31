@@ -1,18 +1,22 @@
 extends layout
 block append js
 	script
-		$(document).ready( function() {
-			$('#d1').datepicker();
-		} );
+		if (typeof jQuery!=='undefined') {
+			$(document).ready( function() {
+				alert('jquery is ready');
+			} );
+		}
 
-		window.addEvent('domready', function(){
-			alert('mootools is reay');
-		});
+		if (typeof addEvent!=='undefined') {
+			window.addEvent('domready', function(){
+				alert('mootools is ready');
+			});
+		}
 block append css
 	style(type="text/css")
 		p.prompt {color:#646464;}
 block content
 	div.container
 		h1= title
-		p.prompt Please select a date
-		input#d1(type='text')
+		div.well
+			p Hello there

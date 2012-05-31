@@ -3,25 +3,32 @@ html
 	head
 		title= title
 		block css
-			if(typeof blueprint!='undefined' && blueprint)
+			if(typeof blueprint!=='undefined' && blueprint)
 				link(rel='stylesheet', href='/stylesheets/blueprint/screen.css', media='screen, projection')
 				link(rel='stylesheet', href='/stylesheets/blueprint/print.css', media='print')
 				// if lt IE 8
 					link(rel='stylesheet', href='/stylesheets/blueprint/ie.css', media='screen, projection')
-			if (typeof jqueryui!='undefined' && jqueryui)
+			if (typeof jqueryui!=='undefined' && jqueryui)
 				link(rel='stylesheet', href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css', media='all')
-			if(typeof blueprint=='undefined' || !blueprint)
-				link(rel='stylesheet', href='/stylesheets/style.css')
+			if(typeof bootstrap!=='undefined' && bootstrap)
+				link(rel='stylesheet', href='http://twitter.github.com/bootstrap/assets/css/bootstrap.css')
+				link(rel='stylesheet', href='http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css')
 		block js
-			if (typeof underscore!='undefined' && underscore)
-				script(src='/js/underscore-min.js')
-			if (typeof jquery!='undefined' && jquery)
-				script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
-			if (typeof jqueryui!='undefined' && jqueryui)
+			// if lt IE 9
+				script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+			if (typeof underscore!=='undefined' && underscore)
+				script(src='http://documentcloud.github.com/underscore/underscore-min.js')
+			if (typeof jquery!=='undefined' && jquery || typeof bootstrap=='undefined' && bootstrap)
+				script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+			if (typeof jqueryui!=='undefined' && jqueryui)
 				script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js')
-			if (typeof mootools!='undefined' && mootools)
+			if (typeof mootools!=='undefined' && mootools)
 				script(src='https://ajax.googleapis.com/ajax/libs/mootools/1.4.3/mootools-yui-compressed.js')
-			if (typeof socket!='undefined' && socket)
+			if (typeof backbone!=='undefined' && backbone)
+				script(src='http://documentcloud.github.com/backbone/backbone-min.js')
+			if(typeof bootstrap!=='undefined' && bootstrap)
+				script(src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.3/bootstrap.min.js')
+			if (typeof socket!=='undefined' && socket)
 				script(src='/socket.io/socket.io.js')
 	body
 		block content
